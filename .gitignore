@@ -1,0 +1,16 @@
+# Local Obsidian data and credentials must never be committed.
+data.json
+.obsidian/
+CMC学习/
+练习/
+题库/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.excalidraw.md
+*.log
+node_modules/
+*.zip
+*.tmp

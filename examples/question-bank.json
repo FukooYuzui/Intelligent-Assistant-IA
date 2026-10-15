@@ -1,0 +1,145 @@
+{
+  "questions": [
+    {
+      "id": "sample-limit-1",
+      "title": "指数函数的二阶极限",
+      "topic": "极限与连续",
+      "difficulty": "进阶",
+      "statement": "计算极限：\n$$\\lim_{x\\to0}\\frac{e^x-1-x}{x^2}.$$ ",
+      "answer": "$\\frac12$",
+      "solution": "由 $e^x=1+x+\\frac{x^2}{2}+o(x^2)$，分子为 $\\frac{x^2}{2}+o(x^2)$，所以极限为 $\\frac12$。",
+      "rubric": [
+        "展开到二阶并写清余项（6分）",
+        "代入并得出极限（4分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    },
+    {
+      "id": "sample-limit-2",
+      "title": "对数函数的三阶极限",
+      "topic": "极限与连续",
+      "difficulty": "进阶",
+      "statement": "计算极限：\n$$\\lim_{x\\to0}\\frac{\\ln(1+x)-x+x^2/2}{x^3}.$$ ",
+      "answer": "$\\frac13$",
+      "solution": "$\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}+o(x^3)$，抵消低阶项后极限为 $\\frac13$。注意零点附近需 $x>-1$。",
+      "rubric": [
+        "对数展开系数、正负号正确（6分）",
+        "消去低阶项并求极限（4分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    },
+    {
+      "id": "sample-limit-3",
+      "title": "正弦函数的三阶极限",
+      "topic": "极限与连续",
+      "difficulty": "进阶",
+      "statement": "计算极限：\n$$\\lim_{x\\to0}\\frac{\\sin x-x}{x^3}.$$ ",
+      "answer": "$-\\frac16$",
+      "solution": "$\\sin x=x-\\frac{x^3}{6}+o(x^3)$，故极限为 $-\\frac16$。不能在相减时仅用 $\\sin x\\sim x$ 抵消全部信息。",
+      "rubric": [
+        "保留三阶项（6分）",
+        "负号和最终答案正确（4分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    },
+    {
+      "id": "sample-derivative-1",
+      "title": "指数型函数的最值",
+      "topic": "导数与微分",
+      "difficulty": "进阶",
+      "statement": "求函数在指定定义域上的最大值，并写出单调区间：\n$$f(x)=xe^{-x},\\quad x>0.$$ ",
+      "answer": "最大值 $1/e$，在 $x=1$ 处取得。",
+      "solution": "$f'(x)=e^{-x}(1-x)$。在 $(0,1)$ 上递增，在 $(1,+\\infty)$ 上递减，因此最大值为 $f(1)=1/e$。",
+      "rubric": [
+        "求导正确（4分）",
+        "导数符号与单调区间（4分）",
+        "最大值（2分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    },
+    {
+      "id": "sample-derivative-2",
+      "title": "对数型函数的最值",
+      "topic": "导数与微分",
+      "difficulty": "进阶",
+      "statement": "求下列函数在其定义域上的最大值：\n$$f(x)=\\frac{\\ln x}{x},\\quad x>0.$$ ",
+      "answer": "最大值 $1/e$，在 $x=e$ 处取得。",
+      "solution": "$f'(x)=(1-\\ln x)/x^2$，在 $(0,e)$ 上为正，在 $(e,+\\infty)$ 上为负，所以最大值 $f(e)=1/e$。",
+      "rubric": [
+        "商法则求导（4分）",
+        "临界点与符号分析（4分）",
+        "最大值（2分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    },
+    {
+      "id": "sample-derivative-3",
+      "title": "构造函数证明不等式",
+      "topic": "导数与微分",
+      "difficulty": "进阶",
+      "statement": "利用导数证明：\n$$\\ln(1+x)<x,\\quad x>0.$$ ",
+      "answer": "不等式成立。",
+      "solution": "设 $g(x)=x-\\ln(1+x)$，则 $g(0)=0$，$g'(x)=x/(1+x)>0$（$x>0$），故 $g(x)>g(0)=0$。",
+      "rubric": [
+        "构造函数（3分）",
+        "求导并说明严格单调（4分）",
+        "与零点函数值比较（3分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    },
+    {
+      "id": "sample-integral-1",
+      "title": "分部积分",
+      "topic": "一元积分",
+      "difficulty": "进阶",
+      "statement": "求不定积分：\n$$\\int xe^x\\,dx.$$ ",
+      "answer": "$xe^x-e^x+C$",
+      "solution": "取 $u=x$、$dv=e^x dx$，于是 $du=dx$、$v=e^x$，分部积分得 $xe^x-\\int e^x dx=xe^x-e^x+C$。",
+      "rubric": [
+        "分部积分的选择（4分）",
+        "积分计算（4分）",
+        "积分常数（2分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    },
+    {
+      "id": "sample-integral-2",
+      "title": "换元积分",
+      "topic": "一元积分",
+      "difficulty": "进阶",
+      "statement": "求不定积分：\n$$\\int\\frac{x}{1+x^2}\\,dx.$$ ",
+      "answer": "$\\frac12\\ln(1+x^2)+C$",
+      "solution": "令 $u=1+x^2$，$du=2x dx$，积分等于 $\\frac12\\int du/u=\\frac12\\ln(1+x^2)+C$。",
+      "rubric": [
+        "换元及系数（5分）",
+        "对数积分（3分）",
+        "积分常数（2分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    },
+    {
+      "id": "sample-integral-3",
+      "title": "识别复合函数积分",
+      "topic": "一元积分",
+      "difficulty": "进阶",
+      "statement": "在被积函数有定义的区间上，求不定积分：\n$$\\int\\frac{\\cos x}{1+\\sin x}\\,dx.$$ ",
+      "answer": "$\\ln|1+\\sin x|+C$",
+      "solution": "令 $u=1+\\sin x$，$du=\\cos x dx$，得到 $\\ln|u|+C$。每个积分区间内 $1+\\sin x\\ne0$；也可写 $\\ln(1+\\sin x)+C$。",
+      "rubric": [
+        "识别换元（4分）",
+        "积分表达式（4分）",
+        "常数及区间条件（2分）"
+      ],
+      "source": "插件示例题",
+      "verification": "provided"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "cmc-codex-trainer",
+  "name": "CMC Codex Trainer",
+  "version": "0.1.16",
+  "minAppVersion": "1.7.2",
+  "description": "题库或 AI 出题、Excalidraw 手写、Codex 视觉评阅与错题复习。使用本机 Codex 登录，无需 API Key。",
+  "author": "CMC Codex Trainer contributors",
+  "isDesktopOnly": true
+}
