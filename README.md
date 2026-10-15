@@ -1,8 +1,8 @@
-# CMC Codex Trainer
+# 智能助教IA：Intelligent Assistant
 
 An Obsidian desktop plugin for studying with question banks or AI-generated questions, handwriting in Excalidraw, and reviewing work with the locally signed-in Codex CLI. The plugin supports mathematics and other subjects through subject, textbook, and chapter filters. Interface language: Chinese.
 
-Current version: **0.1.16**. This repository contains the installable plugin files and small example banks. It does not include textbook scans, imported question banks, handwriting, study history, or account data.
+Current version: **0.1.17**. This repository contains the installable plugin files and small example banks. It does not include textbook scans, imported question banks, handwriting, study history, or account data.
 
 ## What it does
 
@@ -26,10 +26,10 @@ No API key is required. The plugin runs the local Codex CLI and needs network ac
 
 1. Close Obsidian after saving your open drawings.
 2. Copy `main.js`, `manifest.json`, and `styles.css` into `<your vault>/.obsidian/plugins/cmc-codex-trainer/`. Create that folder if necessary. For an update, keep the existing `data.json` and vault study files.
-3. Reopen Obsidian. In **Settings → Community plugins**, enable Excalidraw and CMC Codex Trainer.
-4. Open the CMC learning panel from the ribbon or command palette. Check the Codex login status. If Obsidian cannot find Codex, set its full executable path in plugin settings.
+3. Reopen Obsidian. In **Settings → Community plugins**, enable Excalidraw and **智能助教IA：Intelligent Assistant**.
+4. Open the 智能助教IA learning panel from the ribbon or command palette. Check the Codex login status. If Obsidian cannot find Codex, set its full executable path in plugin settings.
 
-The repository root is the plugin folder. Do not add a second `cmc-codex-trainer` level when copying it into your vault.
+The repository root is the plugin folder. Keep the internal directory and manifest ID `cmc-codex-trainer`: this stable identifier preserves existing Obsidian installations and study data. The display name and GitHub repository are **智能助教IA：Intelligent Assistant**.
 
 ## Add questions
 

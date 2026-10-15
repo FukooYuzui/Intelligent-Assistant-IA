@@ -1,4 +1,4 @@
-/* CMC Codex Trainer 0.1.16 — MIT. Built from src/main.ts. */
+/* 智能助教IA：Intelligent Assistant 0.1.17 — MIT. Built from src/main.ts. */
 "use strict";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
@@ -1184,7 +1184,7 @@ ${f.nextPractice}`,
   async saveSessionNote(session) {
     const stats = statistics(this.data.attempts);
     const text = [
-      `# CMC \u7EC3\u4E60 \xB7 ${dateKey(new Date(session.createdAt))}`,
+      `# 智能助教IA \u7EC3\u4E60 \xB7 ${dateKey(new Date(session.createdAt))}`,
       `\u672C\u8F6E ${session.items.length} \u9898 \xB7 ${session.mode === "ai" ? "AI \u51FA\u9898" : session.mode === "review" ? "\u9519\u9898\u91CD\u505A" : "\u9898\u5E93\u7EC3\u4E60"}`,
       session.selectionMode ? '抽题模式：' + BANK_SELECTION_MODES[session.selectionMode] : '',
       stats.recentCount ? `\u5F00\u59CB\u672C\u8F6E\u524D\uFF1A\u6700\u8FD1 ${stats.recentCount} \u9053\u5DF2\u786E\u8BA4\u9898\u7684\u6B63\u786E\u7387 ${stats.accuracy}%\uFF0C\u5E73\u5747\u5F97\u5206\u7387 ${stats.average}%\u3002\u8FD9\u4E0D\u662F\u6574\u5377\u9884\u6D4B\u5206\u3002` : "\u5C1A\u65E0\u8DB3\u591F\u4F5C\u7B54\u8BB0\u5F55\uFF0C\u672C\u8F6E\u7528\u4E8E\u6478\u5E95\u3002",
@@ -1229,7 +1229,7 @@ var TrainerView = class extends import_obsidian3.ItemView {
     return VIEW_TYPE;
   }
   getDisplayText() {
-    return "CMC \u5B66\u4E60";
+    return "智能助教IA";
   }
   getIcon() {
     return "graduation-cap";
@@ -1276,7 +1276,7 @@ var TrainerView = class extends import_obsidian3.ItemView {
       this.clarification = "";
     }
     const header = root.createDiv({ cls: "cmc-header" });
-    header.createDiv({ cls: "cmc-eyebrow", text: "CMC \xB7 CODEX TRAINER" });
+    header.createDiv({ cls: "cmc-eyebrow", text: "智能助教IA · Intelligent Assistant" });
     header.createEl("h2", { text: "\u628A\u63A8\u5BFC\u5199\u6E05\u695A" });
     header.createEl("p", { text: "\u51FA\u9898\u3001\u624B\u5199\u3001\u8BC4\u9605\u3001\u518D\u7EC3\u4E60\u3002\u6BCF\u6B21\u5411\u719F\u7EC3\u8FC8\u4E00\u6B65\u3002" });
     const stats = statistics(repo.data.attempts), statsBar = root.createDiv({ cls: "cmc-stats" });
@@ -1619,7 +1619,7 @@ var TrainerSettingsTab = class extends import_obsidian4.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("h2", { text: "CMC Codex Trainer" });
+    containerEl.createEl("h2", { text: "智能助教IA：Intelligent Assistant" });
     containerEl.createEl("p", { text: "\u7535\u8111\u7AEF\u5B66\u4E60\u63D2\u4EF6\u3002\u4F7F\u7528\u672C\u673A Codex \u7684 ChatGPT \u8D26\u53F7\u767B\u5F55\uFF1B\u753B\u677F\u4F9D\u8D56 Excalidraw\u3002" });
     const s = this.plugin.repo.data.settings;
     const save = (values) => {
@@ -1969,7 +1969,7 @@ var TrainerPlugin = class extends import_obsidian5.Plugin {
     this.registerEvent(this.app.workspace.on("active-leaf-change", rememberDrawing));
     rememberDrawing(this.app.workspace.activeLeaf ?? this.app.workspace.getMostRecentLeaf());
     this.registerView(VIEW_TYPE, (leaf) => new TrainerView(leaf, this));
-    this.addRibbonIcon("graduation-cap", "\u6253\u5F00 CMC \u5B66\u4E60", () => void this.openPanel());
+    this.addRibbonIcon("graduation-cap", "打开智能助教IA", () => void this.openPanel());
     this.addSettingTab(new TrainerSettingsTab(this.app, this));
     this.registerObsidianProtocolHandler("cmc-question", (params) => {
       const question = this.repo.data.bank.find(q => q.id === params.id);
